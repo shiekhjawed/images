@@ -1,337 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta property="og:title" content="My Awesome Website">
+  <meta property="og:description" content="Explore my latest projects and tutorials.">
+  <meta property="og:image" content="https://yourwebsite.com/images/preview.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <meta name="twitter:card" content="summary_large_image">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn about the different types of areas in Pakistan — rural, urban, and desert regions. Discover their lifestyles, environments, and unique characteristics." />
-  <meta name="keywords" content="Pakistan, rural areas, urban areas, desert areas, geography, regions, countryside, cities" />
-  <meta name="author" content="Shiekh Amber Jawed" />
-
-  <title>Pakistan Areas Portal | Rural, Urban & Desert Regions</title>
+  <title>Amazon Website Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    /* Your existing CSS remains unchanged */
     * {
-      padding: 0;
       margin: 0;
+      padding: 0;
       box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Times New Roman", serif;
-      direction: ltr;
-      background-color: #f8f9fa;
-      color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      background-color: #007bff;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      text-transform: capitalize;
-    }
-
-    header h1 {
-      font-size: clamp(24px, 5vw, 30px);
-      text-transform: capitalize;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: clamp(14px, 3vw, 16px);
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      display: flex;
-      flex: 1;
-      justify-content: space-between;
-      padding: 20px;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    section, article {
-      flex: 1;
-      min-width: 300px;
-      margin-right: 20px;
-      text-align: center;
-    }
-
-    aside {
-      background-color: #e9ecef;
-      padding: 20px;
-      border-radius: 10px;
-      min-width: 200px;
-      background: linear-gradient(45deg, rgb(219, 210, 219), rgb(189, 200, 216), rgb(175, 45, 175), pink);
-      margin-top: 20px;
-    }
-
-    aside h3 {
-      font-size: clamp(18px, 4vw, 20px);
-      margin-bottom: 10px;
-    }
-
-    aside li {
-      line-height: 2rem;
-      color: #007bff;
-    }
-
-    aside li a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .three {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
-    }
-
-    .threeimg {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 20px;
-    }
-
-    footer {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      font-size: clamp(14px, 3vw, 16px);
-      margin-top: auto;
-    }
-
-    article h1 {
-      font-family: 'Georgia', serif;
-      font-size: clamp(24px, 5vw, 34px);
-      color: #1e3a8a;
-      letter-spacing: 1px;
-      margin: 0 0 10px;
-      text-transform: capitalize;
-      text-shadow: 0 3px 8px rgba(30, 58, 138, 0.12);
-      text-align: center;
-    }
-
-    article p {
       font-family: Arial, sans-serif;
-      font-size: clamp(14px, 3vw, 16px);
-      color: #444;
-      max-width: 720px;
-      margin: 0 auto 16px;
-      padding: 12px 16px;
-      font-style: italic;
-      border-radius: 12px;
-      line-height: 1.5;
     }
 
-    figure img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-      object-fit: cover;
-      height: auto;
-      transition: transform 0.3s ease;
-      display: block;
-      margin: 0 auto;
+    /* --- Navbar Styles --- */
+    .navbar {
+      background-color: #003d32;
+      color: white;
+      padding: 10px 15px;
+      min-height: 60px;
     }
 
-    figcaption {
-      max-width: 420px;
-      margin: 20px auto;
-      font-style: italic;
-      line-height: 1.5;
-      text-align: left;
+    .navbar-brand {
+      font-size: 25px;
+      font-weight: bold;
+      color: white !important;
+      display: flex;
+      align-items: center;
     }
 
-    figcaption ul {
-      margin: 8px 0 10px 20px;
-      color: #222;
-      font-style: normal;
-      line-height: 1.6;
+    .navbar-brand:hover {
+      border: 2px solid white;
+      border-radius: 4px;
     }
 
-    figcaption a {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 12px;
-      background: #007bff;
+    .deliver {
+      font-size: 13px;
       color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
+      cursor: pointer;
+    }
+    .deliver:hover {
+      border: 2px solid white;
+      border-radius: 4px;
+      padding: 2px 5px;
     }
 
-    @media (max-width: 1024px) {
-      main {
-        flex-direction: column;
-        align-items: center;
-      }
-      section, article {
-        margin-right: 0;
-        width: 100%;
-        max-width: 600px;
-      }
-      aside {
-        width: 100%;
-        max-width: 400px;
-        margin-top: 20px;
-        height: auto;
-      }
-      .three {
-        flex-direction: column;
-      }
+    /* Search Bar */
+    .search-bar {
+      display: flex;
+      flex: 1;
+      max-width: 800px;
+      margin: 0 15px;
+      height: 40px;
     }
 
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: clamp(20px, 4vw, 24px);
-      }
-      nav a {
-        display: inline-block;
-        margin: 5px 8px;
-        font-size: clamp(12px, 2.5vw, 14px);
-      }
-      article p, figcaption {
-        width: 100%;
-        max-width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      figure img {
+    .search-bar select {
+      padding: 0 10px;
+      border: none;
+      background: #f3f3f3;
+      border-radius: 4px 0 0 4px;
+      border-right: 1px solid #cdcdcd;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 0 10px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+    }
+
+    .search-bar button {
+      background: #febd69;
+      border: none;
+      padding: 0 15px;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      color: #333;
+    }
+    .search-bar button:hover {
+      background: #f3a847;
+    }
+
+    .nav-item {
+      text-align: left;
+      cursor: pointer;
+    }
+    .nav-item:hover {
+      border: 2px solid white;
+      border-radius: 4px;
+      padding: 2px 5px;
+    }
+
+    .cart {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    /* --- Second Navbar (Green) --- */
+    .navbar-secondary {
+      background-color: #232f3e; /* Darker green/blue for better contrast */
+      padding: 5px 15px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .navbar-secondary .nav-link {
+      color: white !important;
+      font-size: 14px;
+      white-space: nowrap;
+      padding: 5px 10px;
+    }
+    .navbar-secondary .nav-link:hover {
+      border: 1px solid white;
+      border-radius: 4px;
+    }
+
+    /* --- Carousel --- */
+    .carousel-item img {
+      height: 350px; /* Fixed height for consistency */
+      object-fit: cover;
+      width: 100%;
+    }
+
+    /* --- Main Content Grid --- */
+
+/* Base Container Styles */
+.container-1, .container-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Card Styles (Shared) */
+.card, .grocery, .grocery-2, .grocery-3 {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  position: relative;
+}
+
+/* Image Grids inside cards */
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Specific grid for the bottom row of images (3 columns) */
+.images.bottom {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Image Styling */
+.images img, .card-3 img, .grocery-3 img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Text Styling */
+.images div {
+  text-align: center;
+}
+
+.images p, .images div {
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+/* Link Styling */
+.card a, .grocery a {
+  color: #0073e6;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.card a:hover, .grocery a:hover {
+  text-decoration: underline;
+}
+
+/* Special Card: Holiday Gift Guide */
+.card-3, .grocery-3 {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card-3 img, .grocery-3 img {
+  width: 100%;
+  height: 350px; /* Taller image */
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card-3 a, .grocery-3 a {
+  color: #0073e6;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* Tablet Adjustments */
+@media (max-width: 992px) {
+  .container-1, .container-2 {
+    padding: 15px;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  /* Stack the grid into 1 column on mobile */
+  .container-1, .container-2 {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  /* Stack images vertically inside the cards */
+  .images {
+    grid-template-columns: 1fr; 
+  }
+  
+  /* Adjust image height for mobile */
+  .images img {
+    height: 150px; 
+  }
+
+  /* Adjust the 3-column grid to 1 column on mobile */
+  .images.bottom {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust the tall gift guide image */
+  .card-3 img, .grocery-3 img {
+    height: 250px;
+  }
+  
+  /* Fix for the specific link in container 2 */
+  .grocery-3 a {
+    margin-top: 10px !important; /* Override inline style if necessary */
+  }
+}
+    /* --- RESPONSIVE MEDIA QUERIES --- */
+
+    /* Tablet & Mobile Adjustments */
+    @media (max-width: 992px) {
+      .search-bar {
         max-width: 100%;
+        margin: 10px 0;
       }
-      footer {
-        padding: 10px;
+      
+      .navbar-brand {
+        font-size: 20px;
       }
     }
 
-    @media (max-width: 480px) {
-      header {
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+      .navbar {
         padding: 10px;
       }
-      main {
+
+      .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        margin: 10px 0;
+      }
+
+      .search-bar select,
+      .search-bar input,
+      .search-bar button {
+        border-radius: 4px;
+        margin: 3px 0;
+        height: 40px;
+      }
+
+      .search-bar button {
+        width: 100%;
+      }
+
+      .nav-item {
+        margin-bottom: 5px;
+      }
+
+      /* Stack the grid into 1 column on mobile */
+      .container-1, .container-2 {
+        grid-template-columns: 1fr;
         padding: 10px;
-        gap: 10px;
       }
-      article h1 {
-        font-size: clamp(20px, 4vw, 24px);
+
+      .images {
+        grid-template-columns: 1fr; /* Stack images vertically */
       }
-      article p, figcaption {
-        font-size: clamp(12px, 2.5vw, 14px);
-        padding: 10px;
+      
+      .images img {
+        height: 150px; /* Taller images on mobile */
       }
-      aside {
-        padding: 15px;
-      }
-      .three {
-        margin-top: 20px;
+
+      .card-3 img, .grocery-3 img {
+        height: 250px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Welcome to the Pakistan Areas Portal</h1>
-    <nav aria-label="Main navigation">
-      <a href="#" title="Go to home page">Home</a> |
-      <a href="#" title="Learn about this site">About</a> |
-      <a href="#" title="Contact information">Contact</a>
-    </nav>
-  </header>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./amazonlogo.jpg" alt="Amazon Logo" style="height: 30px; margin-right: 5px;">
+        
+      </a>
+      
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="fa-solid fa-bars"></span>
+      </button>
 
-  <main>
-    <section id="rural-areas">
-      <article>
-        <h1>Rural Areas of Pakistan</h1>
-        <p>Rural areas are villages and countryside regions where most people depend on agriculture or livestock for their livelihood. They offer open space, cleaner air, and close-knit communities.</p>
-        <figure>
-          <img src="../picture/rularareas.jpeg" alt="Green rural landscape in Pakistan" loading="lazy" />
-          <figcaption>
-            <strong>Rural areas</strong> are regions where most people depend on agriculture or livestock for livelihood.
-            <div>
-              <strong style="display:block;margin-bottom:6px;color:#007bff;">Key features:</strong>
-              <ul>
-                <li>Low population density and wide open spaces</li>
-                <li>Strong community ties and traditional lifestyles</li>
-                <li>Farming-based economy and local markets</li>
-                <li>Cleaner air and a slower pace of life</li>
-              </ul>
-              <a href="#" title="Explore more about rural life in Pakistan">Explore rural life</a>
-            </div>
-          </figcaption>
-        </figure>
-      </article>
-    </section>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto align-items-center">
+          <li class="nav-item mx-3 deliver">
+            <i class="fa-solid fa-location-dot"></i>
+            Deliver to <strong>Pakistan</strong>
+          </li>
+        </ul>
 
-    <section id="urban-areas">
-      <article>
-        <h1>Urban Areas of Pakistan</h1>
-        <p>Urban areas are cities and towns with dense populations, advanced infrastructure, and diverse economic activities. These regions offer better access to education, healthcare, and public services.</p>
-        <figure>
-          <img src="../picture/urbanareas2.jpeg" alt="Urban cityscape in Pakistan" loading="lazy" />
-          <figcaption>
-            <p>Urban areas are hubs of industry, commerce, and culture where people experience a fast-paced lifestyle.</p>
-            <ul>
-              <li>Dense housing and modern transport</li>
-              <li>Access to education and healthcare</li>
-              <li>Economic diversity and cultural vibrancy</li>
+        <!-- Search Bar -->
+        <form class="d-flex search-bar rounded" role="search">
+          <select>
+            <option>All</option>
+          </select>
+          <input type="text" placeholder="Search Amazon">
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item mx-3 text-center">
+            <div><i class="fa-solid fa-flag-usa"></i> EN</div>
+          </li>
+          <li class="nav-item mx-3">
+            <div>Hello, sign in</div>
+            <strong>Account & Lists</strong>
+          </li>
+          <li class="nav-item mx-3">
+            <div>Returns</div>
+            <strong>& Orders</strong>
+          </li>
+          <li class="nav-item mx-3 cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Cart</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Second Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-secondary mt-2">
+    <div class="container-fluid">
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent2">
+        <span class="fa-solid fa-bars"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent2">
+        <ul class="navbar-nav me-auto w-100">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              All
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Cotton</a></li>
+              <li><a class="dropdown-item" href="#">Lawn</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Bridal</a></li>
             </ul>
-            <p><strong>Major urban centers:</strong> Karachi, Lahore, Islamabad, Faisalabad, Rawalpindi, Peshawar, Quetta</p>
-            <a href="#" title="Explore Pakistan's cities">Explore urban life</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Today's Deals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Find an Area</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Starting Up</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Marketing</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-          </figcaption>
-        </figure>
-      </article>
-    </section>
+  <!-- Carousel -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./amazon slideabove.jpg" class="d-block w-100" alt="Slide 1">
+      </div>
+      <div class="carousel-item">
+        <img src="./amazonslideabove2.jpg" class="d-block w-100" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./amazonslideabove3.jpg" class="d-block w-100" alt="Slide 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-    <aside>
-      <h3>Pakistan Area Topics</h3>
-      <ul>
-        <li><a href="#">Introduction</a></li>
-        <li><a href="#rural-areas">Rural Areas</a></li>
-        <li><a href="#urban-areas">Urban Areas</a></li>
-        <li><a href="#desert-areas">Desert Areas</a></li>
-      </ul>
-    </aside>
-  </main>
+  <!-- Section Four (Grid 1) -->
+  <div class="container-1">
+    <div class="card">
+      <h4>Refresh your space</h4>
+      <div class="images">
+        <div><img src="./card11.jpg" alt="Dining"><p>Dining</p></div>
+        <div><img src="./HOL25-Pcard12.jpg" alt="Home"><p>Home</p></div>
+        <div><img src="./HOL25-Pcard13.jpg" alt="Kitchen"><p>Kitchen</p></div>
+        <div><img src="./HOL2card14.jpg" alt="Health"><p>Health</p></div>
+      </div>
+      <a href="#">See more</a>
+    </div>
 
-  <section id="desert-areas" class="three">
-    <article>
-      <h2>Desert Areas of Pakistan</h2>
-      <p>Desert areas are dry regions with very little rainfall and extreme temperatures. Despite the harsh climate, these regions have unique ecosystems and communities that thrive through adaptation and resilience.</p>
-      <figure>
-        <img src="../picture/desert.jpeg" alt="Desert landscape of Pakistan" loading="lazy" />
-        <figcaption>
-          <p>Desert regions feature sand dunes, rocky plains, and sparse vegetation, showcasing nature’s resilience.</p>
-          <ul>
-            <li>Adapted plants and animals (e.g., cacti, camels)</li>
-            <li>Modern irrigation techniques for survival</li>
-            <li>Challenges include water scarcity and heat</li>
-          </ul>
-          <a href="#" title="Learn more about Pakistan's deserts">Learn more</a>
-        </figcaption>
-      </figure>
-    </article>
-  </section>
+    <div class="card">
+      <h4>Top categories in Kitchen appliances</h4>
+      <img src="./card21.jpg" alt="Cooker" style="height: 200px; object-fit: cover;">
+      <div class="images bottom">
+        <div><img src="./card22.jpg" alt="Coffee"><p>Coffee</p></div>
+        <div><img src="./card23.jpg" alt="Pots"><p>Pots</p></div>
+        <div><img src="./card24.jpg" alt="Kettles"><p>Kettles</p></div>
+      </div>
+      <a href="#">Explore all products in Kitchen</a>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Shiekh Amber Jawed. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+    <div class="card-3">
+      <h4>Shop holiday gift guide</h4>
+      <img src="./card3.jpg" alt="Gifts">
+      <a style="margin-top:3rem; margin-right:8rem;" href="#">Explore holiday gifts</a>
+    </div>
+
+    
+    <div class="card">
+      <h4>Fashion trends you like</h4>
+      <div class="images">
+        <div><img src="./card41.jpg" alt="Dresses"><p>Dresses</p></div>
+        <div><img src="./card42.jpg" alt="Knitwear"><p>Knitwear</p></div>
+        <div><img src="./card43.jpg" alt="Jackets"><p>Jackets</p></div>
+        <div><img src="./card44.jpg" alt="Jewelry"><p>Jewelry</p></div>
+      </div>
+      <a href="#">Explore more</a>
+    </div>
+  </div>
+
+    <!-- section five -->
+<!-- section five -->
+<div class="container-2">
+
+  <!-- Card 1 -->
+  <div class="grocery">
+    <h4>Refresh your space</h4>
+    <div class="images">
+      <div>
+        <img src="./cardr21.jpg" alt="">
+        <div>Dining</div>
+      </div>
+      <div>
+        <img src="./cardr22.jpg" alt="">
+        <div>Home</div>
+      </div>
+      <div>
+        <img src="./cardr23.jpg" alt="">
+        <div class="label">Kitchen</div>
+      </div>
+      <div>
+        <img src="./card24.jpg" alt="">
+        <div>Health and Beauty</div>
+      </div>
+    </div>
+    <a href="#">See more</a>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="grocery-2">
+    <h4>Top categories in Kitchen appliances</h4>
+    <img src="./cardv1.jpg" alt="" style="height: 200px; object-fit: cover;">
+    <div class="images bottom">
+      <div>
+        <img src="./cardv2.jpg" alt="">
+        <div>Coffee</div>
+      </div>
+      <div>
+        <img src="./cardv3.jpg" alt="">
+        <div>Pots and Pans</div>
+      </div>
+      <div>
+        <!-- Removed inline margin-left:5em -->
+        <img src="./cardv4.jpg" alt="">
+        <span>kettles</span>
+      </div>
+    </div>
+    <a href="#">Explore all products in Kitchen</a>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="grocery-3">
+    <h4>Shop holiday gift guides</h4>
+    <img src="./cardf.jpg" alt="">
+    <!-- Removed inline margin-top:16rem -->
+    <a href="#">Explore holiday gifts</a>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="grocery">
+    <h4>Fashion trends you like</h4>
+    <div class="images">
+      <div>
+        <img src="./hard.jpg" alt="">
+        <div>Dresses</div>
+      </div>
+      <div>
+        <img src="./hard.jpg" alt="">
+        <div>Knits</div>
+      </div>
+      <div>
+        <img src="./laptop.jpg" alt="">
+        <div>Jackets</div>
+      </div>
+      <div>
+        <img src="./images (2).jpeg" alt="">
+        <div>Jewelry</div>
+      </div>
+    </div>
+    <a href="#">Explore more</a>
+  </div>
+
+</div>
 
 
